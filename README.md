@@ -11,3 +11,4 @@ This is my second edit
 7. I think I like LOTR and The Hobbit by JRR Tolkien more though
 8. They are completely different types of books so I don't think they can really be compared like that though
 9. It is pretty cool that Christopher Lee met Tolkien
+10. I think most celebrities are probably no more special than any other person, just had connections
