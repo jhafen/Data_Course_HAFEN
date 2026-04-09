@@ -12,3 +12,4 @@ This is my second edit
 8. They are completely different types of books so I don't think they can really be compared like that though
 9. It is pretty cool that Christopher Lee met Tolkien
 10. I think most celebrities are probably no more special than any other person, just had connections
+11. last edit in case the one from the assignment page doesn't count
