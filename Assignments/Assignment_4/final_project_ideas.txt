@@ -1,0 +1,1 @@
+My idea for a final project is to use the data from my research group to determine the enzyme that is the best at degrading atrazine, wtAtzA, mutAtzA, or TrzN.
