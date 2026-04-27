@@ -1,0 +1,26 @@
+1. Are any of your predicted response values from your best model scientifically meaningless? Explain.
+Potentially. The values of 60 and 65 for nitrogen result in a negative growth rate, which would not be possible if just starting from spores, but could be possible if starting from other life stages due to cell death.
+
+2. In your plots, did you find any non-linear relationships? Do a bit of research online and give a link to at least one resource explaining how to deal with modeling non-linear relationships in R.
+The loess plot looks better than the linear model. Here is a link: https://www.geeksforgeeks.org/r-language/non-linear-regression-in-r/
+
+3. Write the code you would use to model the data found in “/Data/non_linear_relationship.csv” with a linear model (there are a few ways of doing this)
+nlr=read.csv('Data/non_linear_relationship.csv')
+view(nlr)
+ggplot(nlr,aes(x=predictor,y=response))+
+  geom_point()+
+  geom_smooth(method='lm')+
+  theme_minimal()
+expmod=nls(response~a*exp(b*predictor),data=nlr,start=list(a = 1, b = 1))
+summary(expmod)
+plot(nlr$predictor, nlr$response,
+     main = "Exponential Model Fit",
+     xlab = "Predictor (x)",
+     ylab = "Response (y)",
+     pch = 19,
+     col = "blue")
+xval=seq(min(nlr$predictor),max(nlr$predictor),length.out = 100)
+yval=predict(expmod,newdata=data.frame(predictor=xval))
+lines(xval,yval,col="red",lwd = 2)
+rsq=1-sum(resid(expmod)^2)/sum((nlr$response-mean(nlr$response))^2)
+cat("Approximate R-squared for nls model:", rsq, "\n")
