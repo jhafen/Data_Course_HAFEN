@@ -42,7 +42,7 @@ adm_mod2=glm(data=df,formula = as.logical(admit)~gre*gpa,family = 'binomial')
 adm_mod3=glm(data=df,formula = as.logical(admit)~gre*gpa+rank,family = 'binomial')
 ```
 
-We can pull a report each of the models to see how they perform.
+We can then pull a report each of the models to see how they perform.
 
 ```{r report}
 report(adm_mod)
@@ -63,8 +63,10 @@ As we can see from the Tjur's R2, none of the models are very good.
 
 Then, we can graph them.
 
-```{r performance}
+```{r performance plot}
 plot(compare_performance(adm_mod,adm_mod1,adm_mod2,adm_mod3, rank=TRUE))
 ```
+
+## Conclusion
 
 Model 3 appears to be the best overall model for this data set; however, none of the models appear to predict admission with overwhelming success, indicating that there are other factors contributing to admission that are not included in the data set.
