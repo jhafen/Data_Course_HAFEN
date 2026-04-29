@@ -1,0 +1,23 @@
+---
+title: "Jake Hafen's Website"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## [ABOUT ME & RESEARCH](./about_me/about_me.html) | [CV](./about_me/HafenJ_resume_2025.pdf) | [BIOL 3100 - Final Project](./final_project/final_project.html)##
+
+# Jake Hafen: 
+### Current Biotechnology and Microbiology Student at UVU
+Currently based in Provo, UT. I'm a passionate scientist-in-training and avid outdoors enthusiast.
+
+```{r, out.width="20%", echo = FALSE}
+knitr::include_graphics('headshot_2025.jpg')
+
+```
+
+Welcome to my website! Feel free to explore my research, resume, and my final project for BIOL 3100 (Data Analysis for Biologists). 
+
+Any questions? Email jake.hfn@gmail.com for further inquiries.
